@@ -1,10 +1,10 @@
 package main
 
 import (
+	"io/ioutil"
 	"os"
 	"os/exec"
 	"time"
-	"io/ioutil"
 )
 
 func main() {
