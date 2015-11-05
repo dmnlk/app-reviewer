@@ -12,11 +12,6 @@ func main() {
 		cmd := exec.Command(os.Args[0], "--child")
 		cmd.Start()
 	} else {
-		//		for {
-		//			now := time.Now()
-		//			content := []byte(now.String())
-		//			ioutil.WriteFile("/tmp/output", content, os.ModePerm)
-		//		}
 		tick := time.Tick(3 * time.Second)
 		for {
 
