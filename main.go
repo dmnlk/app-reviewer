@@ -24,3 +24,7 @@ func main() {
 		}
 	}
 }
+
+func GetAppStoreReview() {
+	
+}
