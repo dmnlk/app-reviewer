@@ -26,5 +26,10 @@ func main() {
 }
 
 func GetAppStoreReview() {
-	
+
 }
+
+func GetPlayStoreReview() {
+
+}
+
