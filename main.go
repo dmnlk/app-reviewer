@@ -33,3 +33,6 @@ func GetPlayStoreReview() {
 
 }
 
+func Notify() {
+
+}
