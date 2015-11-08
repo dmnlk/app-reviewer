@@ -7,6 +7,11 @@ import (
 	"time"
 )
 
+const (
+	APPSTORE_URL string = ""
+	PLAYSTORE_URL string = ""
+)
+
 func main() {
 	if len(os.Args) == 1 {
 		cmd := exec.Command(os.Args[0], "--child")
