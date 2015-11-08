@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-const (
+var (
 	APPSTORE_URL string = ""
 	PLAYSTORE_URL string = ""
 )
@@ -19,7 +19,6 @@ func main() {
 	} else {
 		tick := time.Tick(3 * time.Second)
 		for {
-
 			select {
 			case _ = <-tick:
 				now := time.Now()
