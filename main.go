@@ -8,7 +8,7 @@ import (
 )
 
 var (
-	APPSTORE_URL string = ""
+	APPSTORE_ID string = "493470467"
 	PLAYSTORE_URL string = ""
 )
 
