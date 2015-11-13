@@ -38,17 +38,30 @@ func main() {
 
 func GetAppStoreReview() {
 	url := fmt.Sprintf(APPSTORE_URL, APPSTORE_ID)
-	resp, err := http.Get(url)
+	fmt.Println(url)
+	req, err := http.NewRequest("GET", url, nil)
+
+	if err != nil {
+		fmt.Errorf("error")
+	}
+
+	client := &http.Client{}
+	resp, err := client.Do(req)
 	if err != nil {
 		fmt.Errorf("error")
 	}
 	defer resp.Body.Close()
-	val, err := ioutil.ReadAll(resp.Body)
-	if err != nil {
-		fmt.Errorf("error")
-	}
-	pp.Println(val)
 
+	val, err := ioutil.ReadAll(resp.Body)
+	var res ITunesResponse
+	json.Unmarshal(val, &res)
+	for _, value := range res.Feed.Entry {
+		fmt.Print("content:")
+		pp.Println(value.Title.Label)
+		fmt.Print("name:")
+		pp.Println(value.Author.Name.Label)
+	}
+	//pp.Println(res)
 }
 
 func GetPlayStoreReview() {
