@@ -68,6 +68,10 @@ func GetPlayStoreReview() {
 
 }
 
+func SaveAppStoreRevice() {
+	
+}
+
 func Notify() {
 
 }
