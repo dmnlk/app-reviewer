@@ -64,12 +64,9 @@ func GetAppStoreReview() {
 	//pp.Println(res)
 }
 
-func GetPlayStoreReview() {
-
-}
 
 func SaveAppStoreRevice() {
-	
+
 }
 
 func Notify() {
