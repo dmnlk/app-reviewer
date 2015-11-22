@@ -12,6 +12,8 @@ import (
 var (
 	APPSTORE_ID   string = "493470467"
 	PLAYSTORE_URL string = ""
+	SLACK_WEB_HOOK_URL = ""
+	SLACK_CHANNEL = ""
 )
 
 const (
@@ -65,10 +67,10 @@ func GetAppStoreReview() {
 }
 
 
-func SaveAppStoreRevice() {
+func SaveAppStoreReview() {
 
 }
 
-func Notify() {
+func Notify(message string) {
 
 }
