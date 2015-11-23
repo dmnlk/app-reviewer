@@ -7,6 +7,7 @@ import (
 	"net/http"
 
 	"github.com/k0kubun/pp"
+	"github.com/bluele/slack"
 )
 
 var (
@@ -14,6 +15,7 @@ var (
 	PLAYSTORE_URL string = ""
 	SLACK_WEB_HOOK_URL = ""
 	SLACK_CHANNEL = ""
+	SLACK_TOKEN = ""
 )
 
 const (
@@ -68,7 +70,7 @@ func GetAppStoreReview() {
 
 
 func SaveAppStoreReview() {
-
+	slack := slack.New(SLACK_TOKEN)
 }
 
 func Notify(message string) {
