@@ -70,9 +70,17 @@ func GetAppStoreReview() {
 
 
 func SaveAppStoreReview() {
-	slack := slack.New(SLACK_TOKEN)
+
 }
 
 func Notify(message string) {
-
+	s := slack.New(SLACK_TOKEN)
+	c, err := s.FindChannelByName(SLACK_CHANNEL)
+	if err != nil {
+		panic(err)
+	}
+	err = s.ChatPostMessage(c.Id, message, nil)
+	if err != nil {
+		panic(err)
+	}
 }
