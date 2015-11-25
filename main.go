@@ -40,7 +40,7 @@ func main() {
 	GetAppStoreReview()
 }
 
-func GetAppStoreReview() {
+func GetAppStoreReview() ITunesResponse {
 	url := fmt.Sprintf(APPSTORE_URL, APPSTORE_ID)
 	fmt.Println(url)
 	req, err := http.NewRequest("GET", url, nil)
@@ -66,6 +66,8 @@ func GetAppStoreReview() {
 		pp.Println(value.Author.Name.Label)
 	}
 	//pp.Println(res)
+	
+	return res
 }
 
 
