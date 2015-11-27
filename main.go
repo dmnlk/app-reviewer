@@ -59,14 +59,7 @@ func GetAppStoreReview() ITunesResponse {
 	val, err := ioutil.ReadAll(resp.Body)
 	var res ITunesResponse
 	json.Unmarshal(val, &res)
-	for _, value := range res.Feed.Entry {
-		fmt.Print("content:")
-		pp.Println(value.Title.Label)
-		fmt.Print("name:")
-		pp.Println(value.Author.Name.Label)
-	}
-	//pp.Println(res)
-	
+
 	return res
 }
 
