@@ -64,7 +64,7 @@ func GetAppStoreReview() ITunesResponse {
 }
 
 
-func SaveAppStoreReview() {
+func SaveAppStoreReview(label string) {
 
 }
 
