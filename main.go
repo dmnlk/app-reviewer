@@ -68,6 +68,10 @@ func SaveAppStoreReview(label string) {
 
 }
 
+func SortItem() {
+	
+}
+
 func Notify(message string) {
 	s := slack.New(SLACK_TOKEN)
 	c, err := s.FindChannelByName(SLACK_CHANNEL)
