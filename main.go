@@ -16,6 +16,7 @@ var (
 	SLACK_WEB_HOOK_URL = ""
 	SLACK_CHANNEL = ""
 	SLACK_TOKEN = ""
+	LAST_CHECKED_ID = ""
 )
 
 const (
@@ -69,7 +70,7 @@ func SaveAppStoreReview(label string) {
 }
 
 func SortItem() {
-	
+
 }
 
 func Notify(message string) {
