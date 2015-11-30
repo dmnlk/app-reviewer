@@ -66,7 +66,7 @@ func GetAppStoreReview() ITunesResponse {
 
 
 func SaveAppStoreReview(label string) {
-
+	LAST_CHECKED_ID = label
 }
 
 func SortItem() {
