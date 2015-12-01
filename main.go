@@ -39,7 +39,7 @@ func main() {
 	//		}
 	//	}
  	response := GetAppStoreReview()
-	for res,_ range response {
+	for res,_ := range response.Feed {
 
 	}
 }
