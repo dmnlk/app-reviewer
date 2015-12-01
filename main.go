@@ -6,17 +6,16 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/k0kubun/pp"
 	"github.com/bluele/slack"
 )
 
 var (
-	APPSTORE_ID   string = "493470467"
-	PLAYSTORE_URL string = ""
-	SLACK_WEB_HOOK_URL = ""
-	SLACK_CHANNEL = ""
-	SLACK_TOKEN = ""
-	LAST_CHECKED_ID = ""
+	APPSTORE_ID        string = "493470467"
+	PLAYSTORE_URL      string = ""
+	SLACK_WEB_HOOK_URL        = ""
+	SLACK_CHANNEL             = ""
+	SLACK_TOKEN               = ""
+	LAST_CHECKED_ID           = ""
 )
 
 const (
@@ -38,8 +37,8 @@ func main() {
 	//			}
 	//		}
 	//	}
- 	response := GetAppStoreReview()
-	for res,_ := range response.Feed {
+	response := GetAppStoreReview()
+	for res, _ := range response.Feed {
 
 	}
 }
@@ -66,7 +65,6 @@ func GetAppStoreReview() ITunesResponse {
 
 	return res
 }
-
 
 func SaveAppStoreReview(label string) {
 	LAST_CHECKED_ID = label
