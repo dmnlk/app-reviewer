@@ -38,7 +38,10 @@ func main() {
 	//			}
 	//		}
 	//	}
-	GetAppStoreReview()
+ 	response := GetAppStoreReview()
+	for res,_ range response {
+
+	}
 }
 
 func GetAppStoreReview() ITunesResponse {
